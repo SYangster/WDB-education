@@ -12,7 +12,7 @@
     <title>Your Personal Website: Template 1</title>
 </head>
 <body>
-    <div class="splash-page">
+    <div id="panel1" class="splash-page">
         <div class="title">
             <div class="headline">
                 <p>Sean Yang</p>
@@ -31,16 +31,22 @@
         <img id="headshot" src="headshot.jpg">
     </div>
 
-    <div class="about">
-            <h2 id="about_section">About Me</h2>
+    <div id="panel2" class="about">
+            <h1 id="about_section">About Me</h1>
             <p>Hi! I'm Sean, a CS student at UC Berkeley from the bay area. Some of my professional interests include backend development, systems, and applied machine learning. Outside of my studies, I enjoy playing guitar, drawing, running a lot of miles, and eating all sorts of good food.</p> 
             <br>
-            <h2 id="resume_section">Resume</h2>
-        <img id="resume" src="SeanYangResume.jpg">
             <br>
-            <h2 id="contact_section">Contact</h2>
-            <p>seanyang@berkeley.edu  /  408-772-9935  /  https://www.linkedin.com/in/sean-yang-3782ba192/</p>
+            <h1 id="resume_section">Resume</h1>
+        <img id="resume" src="SeanYangResume.jpg">
     </div>
+
+    <div class="footer">
+            <h1 id="contact_section">Contact</h1>
+            <p>seanyang@berkeley.edu</p>
+            <p>408-772-9935</p>
+            <p>https://www.linkedin.com/in/sean-yang-3782ba192/</p>
+    </div>
+
     <script>
         document.getElementById('about_button').addEventListener('click', function() {
             location.href = '#about_section'
@@ -51,6 +57,23 @@
         document.getElementById('contact_button').addEventListener('click', function() {
             location.href = '#contact_section'
         }, false);
+
+        var panel = document.getElementById('panel1');
+
+        function fadeOutOnScroll(element1) {
+            var scrollTop = document.documentElement.scrollTop - 400;
+            opacity = 1 - (scrollTop / (window.innerHeight));
+            
+            if (opacity >= 0) {
+                element1.style.opacity = opacity;
+            }
+        }
+
+        function scrollHandler() {
+            fadeOutOnScroll(panel);
+        }
+        window.addEventListener('scroll', scrollHandler);
+
     </script>
 </body>
 </html>
