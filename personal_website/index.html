@@ -1,0 +1,56 @@
+<!--
+    Please note that this HTML template is a starting point!
+    It is absolutely not comprehensive, and you will almost surely have to add more.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Your Personal Website: Template 1</title>
+</head>
+<body>
+    <div class="splash-page">
+        <div class="title">
+            <div class="headline">
+                <p>Sean Yang</p>
+            </div>
+            <div class="subline">
+                <p>3rd year computer science major studying at UC Berkeley.</p>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="nav">
+                <div id="about_button" class="nav-button">About</div>
+                <div id="resume_button" class="nav-button">Resume</div>
+                <div id="contact_button" class="nav-button">Contact</div>
+            </div>
+        </div>
+        <img id="headshot" src="headshot.jpg">
+    </div>
+
+    <div class="about">
+            <h2 id="about_section">About Me</h2>
+            <p>Hi! I'm Sean, a CS student at UC Berkeley from the bay area. Some of my professional interests include backend development, systems, and applied machine learning. Outside of my studies, I enjoy playing guitar, drawing, running a lot of miles, and eating all sorts of good food.</p> 
+            <br>
+            <h2 id="resume_section">Resume</h2>
+        <img id="resume" src="SeanYangResume.jpg">
+            <br>
+            <h2 id="contact_section">Contact</h2>
+            <p>seanyang@berkeley.edu  /  408-772-9935  /  https://www.linkedin.com/in/sean-yang-3782ba192/</p>
+    </div>
+    <script>
+        document.getElementById('about_button').addEventListener('click', function() {
+            location.href = '#about_section'
+        }, false);
+        document.getElementById('resume_button').addEventListener('click', function() {
+            location.href = '#resume_section'
+        }, false);
+        document.getElementById('contact_button').addEventListener('click', function() {
+            location.href = '#contact_section'
+        }, false);
+    </script>
+</body>
+</html>
